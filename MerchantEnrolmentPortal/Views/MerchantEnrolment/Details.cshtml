@@ -1,0 +1,68 @@
+﻿@model MerchantEnrolmentPortal.Models.MerchantEnrolmentModel
+
+<div>
+    <h4>View Merchant Enrolment </h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MerchantId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MerchantId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MerchantName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MerchantName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Country)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Country)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MerchantProfit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MerchantProfit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfOutlets)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfOutlets)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedOn)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MerchantId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

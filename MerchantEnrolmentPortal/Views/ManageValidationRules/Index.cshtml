@@ -1,0 +1,55 @@
+﻿@model IEnumerable<MerchantEnrolmentPortal.Models.CodesetModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Enrolment Rule</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<a href='@Url.Action("Index", "MerchantEnrolment")'>
+    <input type='button' value='Back To Enrolment' />
+</a>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RuleId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RuleId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Country)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndDate)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.RuleId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.RuleId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.RuleId })
+            </td>
+        </tr>
+    }
+
+</table>
